@@ -1,4 +1,4 @@
-import logo from "C:/Users/aband/OneDrive/Desktop/React-portfolio/src/assets/PaciliaLogoW2.png"
+import logo from "../assets/PaciliaLogoW2.png"
 import { FaLinkedin } from "react-icons/fa6"
 import { FaGithub } from "react-icons/fa6"
 import { Link } from "react-scroll"

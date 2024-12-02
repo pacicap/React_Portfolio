@@ -1,5 +1,5 @@
 import { ABOUT_TEXT } from "../constants"
-import aboutImg from "C:/Users/aband/OneDrive/Desktop/React-portfolio/src/assets/about2.jpg"
+import aboutImg from "../assets/about2.jpg"
 import { motion } from "framer-motion"
 import DownloadCV from '../components/DownloadCV'
 
