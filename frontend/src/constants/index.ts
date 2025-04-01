@@ -98,6 +98,14 @@ export const PROJECTS = [
       "A personal portfolio website showcasing projects, skills, and contact information.",
     technologies: ["HTML", "CSS", "React", "Bootstrap"],
   },
+  {
+    title: "AI Image Generator",
+    description:
+      "An interactive app that generates furniture images from text prompts using a Fine-tunned Stable Diffusion V2-1 model.",
+    image: "/ai-generator.png", // use a placeholder or custom icon (optional)
+    technologies: ["React", "TypeScript", "Hugging Face API", "TailwindCSS"],
+    isCustomComponent: true, // 👈 This tells your component to load <AIGenerator />
+  },
 ];
 
 export const CONTACT = {
