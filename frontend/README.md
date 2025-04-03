@@ -1,3 +1,12 @@
+# Runing the model
+In one terminal run backend
+- enter folder
+- run "python -m uvicorn main:app --reload"
+In another terminal run frontend
+- enter folder
+- run "npm run dev"
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

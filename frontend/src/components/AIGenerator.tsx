@@ -5,11 +5,11 @@ const AIGenerator: React.FC = () => {
     const [prompt, setPrompt] = useState('');
     const [image, setImage] = useState<string | null>(null);
     const [loading, setLoading] = useState(false);
-    const [selectedModel, setSelectedModel] = useState('model1');
+    const [selectedModel, setSelectedModel] = useState('model2');
   
     const modelEndpoints: { [key: string]: string } = {
-      model1: 'https://huggingface.co/Pacicap/FineTuned_StableDiffussion_2_1/tree/main/sd-claude-model',
-      model2: 'https://huggingface.co/Pacicap/FineTuned_StableDiffussion_2_1/tree/main/sd_gpt4o_model',
+      model1: "model1",
+      model2: "model2"
     };
   
     const handleGenerate = async () => {
@@ -18,16 +18,14 @@ const AIGenerator: React.FC = () => {
       setImage(null);
   
       try {
-        const response = await axios({
-          method: 'POST',
-          url: modelEndpoints[selectedModel],
-          headers: {
-            Authorization: `Bearer ${import.meta.env.VITE_HUGGINGFACE_API_TOKEN}`,
-            'Content-Type': 'application/json',
+        const response = await axios.post(
+          'http://127.0.0.1:8000/generate', // your FastAPI backend
+          {
+            prompt,
+            model: modelEndpoints[selectedModel],
           },
-          data: { inputs: prompt },
-          responseType: 'blob',
-        });
+          { responseType: 'blob' }
+        );
   
         const imageURL = URL.createObjectURL(response.data);
         setImage(imageURL);
@@ -49,14 +47,14 @@ const AIGenerator: React.FC = () => {
           placeholder="Enter your prompt here..."
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
-          className="w-full p-2 border rounded mb-4"
+          className="w-full p-2 border rounded mb-4 text-black"
         />
   
         {/* Model Selection */}
         <select
           value={selectedModel}
           onChange={(e) => setSelectedModel(e.target.value)}
-          className="w-full p-2 border rounded mb-4 bg-white"
+          className="w-full p-2 border rounded mb-4 bg-white text-black"
         >
           <option value="model1">Model 1 – Fine-Tunned Stable Diffusion 2.1 with Claude dataset</option>
           <option value="model2">Model 2 – Fine-Tunned Stable Diffusion 2.1 with gpt4o dataset</option>
