@@ -5,6 +5,7 @@ import project8 from "../assets/projects/project-8.jpeg";
 import project9 from "../assets/projects/project-9.jpeg";
 import project10 from "../assets/projects/project-10.jpeg";
 import project11 from "../assets/projects/project-11.jpeg";
+import project12 from "../assets/projects/project-12.png";
 
 export const HERO_CONTENT = `AI enthusiast driven by a passion for innovative, sustainable solutions and transformative technologies.`;
 
@@ -102,7 +103,7 @@ export const PROJECTS = [
     title: "AI Image Generator",
     description:
       "An interactive app that generates furniture images from text prompts using a Fine-tunned Stable Diffusion V2-1 model.",
-    image: project10, // use a placeholder or custom icon (optional)
+    image: project12, // use a placeholder or custom icon (optional)
     technologies: ["React", "TypeScript", "Hugging Face API", "TailwindCSS", "Python"],
     isCustomComponent: true, // 👈 This tells your component to load <AIGenerator />
   }
