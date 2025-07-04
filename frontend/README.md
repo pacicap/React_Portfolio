@@ -6,6 +6,10 @@ In another terminal run frontend
 - enter folder
 - run "npm run dev"
 
+# Contact form
+
+Made with "https://web3forms.com/"
+
 
 # React + TypeScript + Vite
 

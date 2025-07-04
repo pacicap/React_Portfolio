@@ -102,14 +102,14 @@ export const PROJECTS = [
     title: "AI Image Generator",
     description:
       "An interactive app that generates furniture images from text prompts using a Fine-tunned Stable Diffusion V2-1 model.",
-    image: "/ai-generator.png", // use a placeholder or custom icon (optional)
-    technologies: ["React", "TypeScript", "Hugging Face API", "TailwindCSS"],
+    image: project10, // use a placeholder or custom icon (optional)
+    technologies: ["React", "TypeScript", "Hugging Face API", "TailwindCSS", "Python"],
     isCustomComponent: true, // 👈 This tells your component to load <AIGenerator />
-  },
+  }
 ];
 
 export const CONTACT = {
-  address: "Universitätstr 7, 03046 Cottbus, Germany",
-  phoneNo: "+49 176 59596597",
-  email: "abandapacilia@gmail.com",
+  address: "",
+  phoneNo: "",
+  email: "",
 };
