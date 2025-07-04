@@ -111,6 +111,9 @@ const Contact = () => {
         >
           Send Message
         </button>
+
+        {/* Display the result */}
+        {result && <p>{result}</p>}
       </form>
     </div>
   )
