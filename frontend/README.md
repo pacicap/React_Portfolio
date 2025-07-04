@@ -2,6 +2,7 @@
 In one terminal run backend
 - enter folder
 - run "python -m uvicorn main:app --reload"
+
 In another terminal run frontend
 - enter folder
 - run "npm run dev"
